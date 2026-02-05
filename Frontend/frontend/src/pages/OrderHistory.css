@@ -1,0 +1,306 @@
+.order-history-page {
+  font-family: 'Work Sans', sans-serif;
+  color: black;
+ }
+ 
+ 
+ .profile-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #f8f9fc;
+  border-bottom: 1px solid #e0e0e0;
+ }
+ 
+ 
+ .profile-bar span {
+  font-size: 1.2rem;
+  font-weight: 600;
+ }
+ 
+ 
+ .profile-bar button {
+  padding: 0.5rem 1rem;
+  background: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+ }
+ 
+ 
+ .orders-content {
+  padding: 2rem;
+ }
+ 
+ 
+ .section-wrapper {
+  background: white;
+  border-radius: 12px;
+  border-color: #000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 480px;        /* reduced from previous wider size */
+  width: 90%;              /* responsive on smaller screens */
+}
+
+ 
+ 
+ .section-wrapper h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+ }
+ 
+ 
+ .no-orders-message {
+  font-style: italic;
+  color: #555;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px dashed #ccc;
+  text-align: center;
+ }
+ 
+ 
+ .order-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+ }
+ 
+ 
+ .order-card p {
+  margin: 0.25rem 0;
+ }
+ 
+ 
+ .order-card ul {
+  list-style: disc inside;
+  margin: 0.5rem 0 0;
+  padding-left: 1rem;
+ }
+ 
+ 
+ .products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* <<< from 220px to 180px */
+  gap: 1.2rem; /* <<< slightly smaller gaps too */
+  margin-top: 2rem;
+  max-width: 1000px; /* <<< optional: slightly narrower */
+  margin-left: auto;
+  margin-right: auto;
+ }
+ 
+ 
+ 
+ 
+ .logout-button-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* stays on top */
+ }
+ 
+ 
+ .logout-button {
+  padding: 0.7rem 1.5rem;
+  background: #e53e3e;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s ease;
+ }
+
+ .refund-button {
+  margin-bottom: 10px;
+  padding: 0.7rem 1.5rem;
+  background: #4299e1;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s ease;
+}
+
+.refund-button:hover {
+  background: #2b6cb0;
+}
+
+ 
+ 
+ .logout-button:hover {
+  background: #c53030;
+ }
+ 
+ 
+ .orders-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; /* space between the two tables */
+  margin-bottom: 2rem;
+ }
+ 
+ 
+ .orders-grid .section-wrapper {
+  flex: 1 1 45%; /* make each table ~45% width */
+  min-width: 300px; /* if screen is very small, stack them */
+ }
+ 
+ 
+ 
+ 
+ .cancel-order-button {
+  margin-top: 1rem;
+  margin-left: auto;
+  display: block;
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background 0.2s ease;
+ }
+ 
+ 
+ .cancel-order-button:hover {
+  background-color: #c53030;
+ }
+
+
+ .logout-button-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* even spacing between buttons */
+}
+
+.logout-button,
+.refund-button {
+  width: 180px;              /* consistent width */
+  text-align: center;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s ease;
+}
+
+/* Specific colors */
+.logout-button {
+  background: #e53e3e;
+  color: white;
+  height: 80px;
+}
+
+.logout-button:hover {
+  background: #c53030;
+}
+
+.refund-button {
+  background: #4299e1;
+  color: white;
+  height: 80px;
+}
+
+.refund-button:hover {
+  background: #2b6cb0;
+}
+
+/* Shrink grid and cards just for the recommendation section */
+.mini-grid {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  max-width: 800px;
+}
+
+.mini-grid .product-card {
+  padding: 0.75rem;
+  font-size: 0.85rem;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.mini-grid .product-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.mini-grid .product-card .price,
+.mini-grid .product-card .stock {
+  font-size: 0.85rem;
+  margin: 0.3rem 0;
+}
+
+.mini-grid .product-card button.add-btn {
+  font-size: 0.8rem;
+  padding: 6px 12px;
+}
+
+
+.products-grid.mini-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.pagination-controls {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.pagination-controls button {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  background-color: #ccc;
+  color: #000;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.pagination-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-controls button:not(:disabled):hover {
+  background-color: #aaa;
+}
+
+.cancel-order-button.disabled-button {
+  background-color: #a0a0a0;
+  color: #e0e0e0;
+  cursor: not-allowed;
+  pointer-events: none; /* Just in case */
+  box-shadow: none;
+}
+
+
+
+
+ 

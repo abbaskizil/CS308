@@ -1,0 +1,88 @@
+.product-card {
+  width: 160px; /* ↓ from 200px */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px; /* ↓ from 16px */
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.product-info {
+  text-align: center;
+}
+
+.product-info h3 {
+  font-size: 0.95rem; /* ↓ slightly */
+  margin: 0 0 6px;
+}
+
+.product-info .price {
+  margin: 0 0 4px;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.product-info .stock {
+  margin: 0 0 10px;
+  font-size: 0.8rem; /* ↓ slightly */
+  color: #555;
+}
+
+.add-btn {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  background-color: #1ae839;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.add-btn:hover {
+  background-color: #0fc8bf;
+}
+
+.add-btn.disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: default;
+}
+
+.wishlist-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0;              /* 🔒 HIDE by default */
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .wishlist-icon {
+  opacity: 1;              /* ✅ SHOW on hover */
+}
+
+.heart {
+  transition: color 0.3s ease;
+  color: white;
+  stroke: black;
+  stroke-width: 30;
+}
+
+.heart.filled {
+  color: red;
+  stroke: black;
+  stroke-width: 30;
+}
